@@ -43,8 +43,10 @@ Vagrant.configure("2") do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  config.vm.synced_folder ".", "/vagrant", disabled: true
-  config.vm.synced_folder "shared_with_host", "/shared"
+  config.vm.synced_folder ".", "/vagrant", disabled: false
+  config.vm.synced_folder "shared_with_guest", "/shared", type:"virtualbox"
+  # Comment FTA : since it is a VirtualBox hypervisor, it is necessary to indicate the type of shared.
+  # AND the Extension Pack shall be installed.
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
