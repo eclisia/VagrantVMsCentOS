@@ -10,6 +10,8 @@ Vagrant.configure("2") do |config|
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
 
+
+
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
   config.vm.box = "centos/7"
@@ -50,7 +52,9 @@ Vagrant.configure("2") do |config|
   # vagrant plugin install vagrant-vbguest
   config.vm.synced_folder "shared_with_guest", "/shared", type:"virtualbox"
 
-
+  #To configure the hostname of the VM
+  config.vm.hostname = "vagrantguest"
+  
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
