@@ -54,6 +54,10 @@ Vagrant.configure("2") do |config|
 
   #To configure the hostname of the VM
   config.vm.hostname = "vagrantguest"
+
+  #To permit the GUI of programms running inside VAGRANT BOX
+  config.ssh.forward_x11 = true
+  config.ssh.forward_agent = true
   
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
