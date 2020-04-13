@@ -84,6 +84,7 @@ Vagrant.configure("2") do |config|
   #Add of the name of the VM
     config.vm.provider "virtualbox" do |v|
       v.name = "CentOSFTAServer"
-   end
+      v.memory = 8000
+      v.cpus = 2
 end
 
