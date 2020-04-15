@@ -86,5 +86,5 @@ Vagrant.configure("2") do |config|
       v.name = "CentOSFTAServer"
       v.memory = 8000
       v.cpus = 2
+    end
 end
-
